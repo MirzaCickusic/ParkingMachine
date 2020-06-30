@@ -1,11 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f245c284-47fa-40c1-b34d-d4ddebb12736" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/test/java/Test.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
-    </list>
+    <list default="true" id="f245c284-47fa-40c1-b34d-d4ddebb12736" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -47,5 +43,11 @@
       <updated>1593520796260</updated>
     </task>
     <servers />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="581" y="369" key="VCS.EditChangelistDialog" timestamp="1593522588058">
+      <screen x="0" y="0" width="1500" height="1000" />
+    </state>
+    <state x="581" y="369" key="VCS.EditChangelistDialog/0.0.1500.1000/3000.0.1024.1280@0.0.1500.1000" timestamp="1593522588058" />
   </component>
 </project>
