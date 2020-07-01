@@ -1,7 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f245c284-47fa-40c1-b34d-d4ddebb12736" name="Default Changelist" comment="" />
+    <list default="true" id="f245c284-47fa-40c1-b34d-d4ddebb12736" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/Controler/TicketsRepresentation.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Database/DbConection.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Database/StoringTicketsToDB.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -45,6 +51,10 @@
     <servers />
   </component>
   <component name="WindowStateProjectService">
+    <state x="492" y="299" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1593529581450">
+      <screen x="0" y="0" width="1500" height="1000" />
+    </state>
+    <state x="492" y="299" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1500.1000@0.0.1500.1000" timestamp="1593529581450" />
     <state x="581" y="369" key="VCS.EditChangelistDialog" timestamp="1593522588058">
       <screen x="0" y="0" width="1500" height="1000" />
     </state>
