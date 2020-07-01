@@ -2,11 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f245c284-47fa-40c1-b34d-d4ddebb12736" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/Controler/TicketsRepresentation.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Database/DbConection.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Database/StoringTicketsToDB.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Database/GettingTicketsFromDB.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Controler/TicketsRepresentation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controler/TicketsRepresentation.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

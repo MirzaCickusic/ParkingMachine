@@ -6,4 +6,9 @@ public class TicketsRepresentation {
     public void individualTicketRepresentation(double ticketPrice) {
 
     }
+
+    //Mehanizam ispisivanja svih izdatih karata
+    public void allTicketsRepresantation() {
+
+    }
 }
