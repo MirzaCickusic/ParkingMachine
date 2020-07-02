@@ -17,8 +17,8 @@ public class TicketObject {
         return dateAndTimeTicketExpires;
     }
 
-    public static void setDateAndTimeTicketExpires(String dateAndTimeTicketExpires) {
-        TicketObject.dateAndTimeTicketExpires = dateAndTimeTicketExpires;
+    public static void setDateAndTimeTicketExpires(String jo) {
+        dateAndTimeTicketExpires = jo;
     }
 
     public int getID() {
@@ -46,32 +46,34 @@ public class TicketObject {
     }
 
     public static void setTicketToDayleTicket() {
-        DateTimeFormatter FOMATTER = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss ");
+        DateTimeFormatter FOMATTER = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss");
         LocalDateTime date = LocalDateTime.now().plusDays(1);
         String dayleTicketEndTimeAndDate = FOMATTER.format(date);
-        dateAndTimeTicketExpires = dayleTicketEndTimeAndDate;
+        setDateAndTimeTicketExpires(dayleTicketEndTimeAndDate);
 
 
     }
 
-    public static void setParkingForOneHour() {
-        DateTimeFormatter FOMATTER = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss ");
+    public static String setParkingForOneHour() {
+        DateTimeFormatter FOMATTER = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss");
         LocalDateTime date = LocalDateTime.now().plusHours(1);
         String dayleTicketEndTimeAndDate = FOMATTER.format(date);
-        dateAndTimeTicketExpires = dayleTicketEndTimeAndDate;
+        setDateAndTimeTicketExpires(dayleTicketEndTimeAndDate);
+
+        return dayleTicketEndTimeAndDate;
     }
 
     public static void setParkingForTwoHour() {
-        DateTimeFormatter FOMATTER = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss ");
+        DateTimeFormatter FOMATTER = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss");
         LocalDateTime date = LocalDateTime.now().plusHours(2);
         String dayleTicketEndTimeAndDate = FOMATTER.format(date);
-        dateAndTimeTicketExpires = dayleTicketEndTimeAndDate;
+        setDateAndTimeTicketExpires(dayleTicketEndTimeAndDate);
     }
 
     public static void setParkingForFourHour() {
-        DateTimeFormatter FOMATTER = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss ");
+        DateTimeFormatter FOMATTER = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss");
         LocalDateTime date = LocalDateTime.now().plusHours(4);
         String dayleTicketEndTimeAndDate = FOMATTER.format(date);
-        dateAndTimeTicketExpires = dayleTicketEndTimeAndDate;
+        setDateAndTimeTicketExpires(dayleTicketEndTimeAndDate);
     }
 }

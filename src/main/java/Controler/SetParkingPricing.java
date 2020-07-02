@@ -2,7 +2,7 @@ package Controler;
 
 public class SetParkingPricing {
 
-    public static String setHourlyPrice(double pricePerHour) {
+    public static String setHourlyRate(double pricePerHour) {
         return String.valueOf(pricePerHour);
     }
 

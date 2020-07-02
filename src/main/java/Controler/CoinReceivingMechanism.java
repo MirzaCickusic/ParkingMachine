@@ -9,13 +9,13 @@ import java.util.Scanner;
 
 public class CoinReceivingMechanism {
 
-    static double total;
+    private static double total;
 
     public static String getTotal() {
         return String.valueOf(total);
     }
 
-    static void setTotal(double newTotal) {
+    public static void setTotal(double newTotal) {
         total = newTotal;
     }
 
@@ -59,7 +59,7 @@ public class CoinReceivingMechanism {
         TicketObject.setDateAndTimeTicketCreated(dayleTicketEndTimeAndDate);
     }
 
-    static double sumOfUserCoins(ArrayList<Double> coinsList) {
+    private static double sumOfUserCoins(ArrayList<Double> coinsList) {
 
         double totalAmount = 0;
 
