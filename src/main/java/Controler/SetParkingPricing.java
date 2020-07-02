@@ -2,11 +2,11 @@ package Controler;
 
 public class SetParkingPricing {
 
-    public void setHourlyPrice(double pricePerHour) {
-
+    public static String setHourlyPrice(double pricePerHour) {
+        return String.valueOf(pricePerHour);
     }
 
-    public void setDaylePrice(double daylePrice) {
-
+    public static String setDaylePrice(String daylePrice) {
+        return String.valueOf(daylePrice);
     }
 }
