@@ -14,8 +14,6 @@ public class StoringTicketsToDB {
     private static String sqlQuery = "insert into tickets(timeCreated, totalPrice, hourlyRate, dayleTicket, " +
             "totalLength, timeExpired) values (?, ?, ?, ?, ?, ?)";
 
-
-
     public static boolean addCustomer() {
         String totalPriceOfTicket = CoinReceivingMechanism.getTotal();
         String timeTicketExpires = CalculateTotalLenghtOfParkingTicket.calculateTimeTicketLasts(totalPriceOfTicket);
@@ -36,6 +34,9 @@ public class StoringTicketsToDB {
             int affected = statement.executeUpdate();
             if (affected == 1) {
                 System.out.println("Ticked stored successfully!");
+
+                GetLastAddedUser.getUserID();
+
                 connection.close();
                 statement.close();
                 return true;

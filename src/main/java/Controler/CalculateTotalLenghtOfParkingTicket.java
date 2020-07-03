@@ -7,14 +7,6 @@ public class CalculateTotalLenghtOfParkingTicket {
     private static String timeTicketExpires;
     private static String timeTicketLasts;
 
-    public static String getTotalTime() {
-        return timeTicketExpires;
-    }
-
-    public static String getTimeTicketExpires() {
-        return timeTicketExpires;
-    }
-
     static void setTimeTicketExpires(String newTotalTime) {
         timeTicketExpires = newTotalTime;
     }
@@ -26,26 +18,24 @@ public class CalculateTotalLenghtOfParkingTicket {
             setTimeTicketExpires(TicketObject.getDateAndTimeTicketExpires());
             setTimeTicketLasts("24:00:00");
 
-            System.out.println("Dayle ticket activated. Dayle ticket lasts 24h!");
+            System.out.println("Dayle ticket activated");
 
             return timeTicketExpires;
-
         }
 
         if (Double.parseDouble(totalPriceOfTicket) == 1) {
-
             setTimeTicketLasts("01:00:00");
             setTimeTicketExpires(TicketObject.setParkingForOneHour());
 
             return timeTicketExpires;
         } else if (Double.parseDouble(totalPriceOfTicket) == 2) {
-            TicketObject.setParkingForTwoHour();
             setTimeTicketLasts("02:00:00");
+            setTimeTicketExpires(TicketObject.setParkingForTwoHour());
 
             return timeTicketExpires;
         } else if (Double.parseDouble(totalPriceOfTicket) == 4) {
-            TicketObject.setParkingForFourHour();
             setTimeTicketLasts("04:00:00");
+            setTimeTicketExpires(TicketObject.setParkingForFourHour());
 
             return timeTicketExpires;
         } else {

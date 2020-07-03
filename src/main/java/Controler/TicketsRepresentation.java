@@ -11,11 +11,11 @@ public class TicketsRepresentation {
     }
 
     //Mehanizam ispisivanja svih izdatih karata
-    public void allTicketsRepresantation() {
+    public static void allTicketsRepresentation() {
 
-        System.out.println("Total number of tickets issued: " + GettingTicketsFromDB.getNumberOfTicketsIssued());
+        System.out.println("\nTotal number of tickets issued: " + GettingTicketsFromDB.getNumberOfTicketsIssued());
 
-        System.out.println("\nList of all individual tickets: ");
+        System.out.println("\nList of all individual tickets: \n");
 
         GettingTicketsFromDB.printAllTicketIssued();
     }
