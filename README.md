@@ -8,7 +8,7 @@ To run this project you will need:
 Steps:
 - Clone this repo to your local machine
 - Open parkingMachine.sql file from repo by folowing this guide (https://www.wikihow.com/Open-an-Sql-File)
-- Ater you opened execute everything in mySql workbench 
+- Execute everything in MySql workbench 
 - Open other folders and files in your IDE of preference
 - Run the program
 
