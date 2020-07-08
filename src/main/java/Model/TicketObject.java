@@ -8,22 +8,23 @@ public class TicketObject {
     private static int ID;
     private static String dateAndTimeTicketCreated;
     private static String dateAndTimeTicketExpires;
+    private static double moneyUserEntered;
 
 
     public static String getDateAndTimeTicketExpires() {
         return dateAndTimeTicketExpires;
     }
 
-    public static void setDateAndTimeTicketExpires(String jo) {
-        dateAndTimeTicketExpires = jo;
+    public static void setDateAndTimeTicketExpires(String dateAndTicket) {
+        dateAndTimeTicketExpires = dateAndTicket;
     }
 
     public static String getDateAndTimeTicketCreated() {
         return dateAndTimeTicketCreated;
     }
 
-    public static void setDateAndTimeTicketCreated(String date) {
-        dateAndTimeTicketCreated = date;
+    public static void setDateAndTimeTicketCreated(String dateAndTime) {
+        dateAndTimeTicketCreated = dateAndTime;
     }
 
 
@@ -35,21 +36,8 @@ public class TicketObject {
 
     }
 
-    public static String setParkingForOneHour() {
-        return dateFormatter(1);
-    }
 
-    public static String setParkingForTwoHour() {
-        return dateFormatter(2);
-
-    }
-
-    public static String setParkingForFourHour() {
-       return dateFormatter(4);
-
-    }
-
-    public static Object getID() {
+    public static int getID() {
         return ID;
     }
 
@@ -57,14 +45,12 @@ public class TicketObject {
         ID = newID;
     }
 
-    static String dateFormatter(int hoursToBeAddedToTicketLength) {
 
-        DateTimeFormatter FOMATTER = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss");
-        LocalDateTime date = LocalDateTime.now().plusHours(hoursToBeAddedToTicketLength);
-        String dayleTicketEndTimeAndDate = FOMATTER.format(date);
+    public static double getMoneyUserEntered() {
+        return moneyUserEntered;
+    }
 
-        setDateAndTimeTicketExpires(dayleTicketEndTimeAndDate);
-
-        return dayleTicketEndTimeAndDate;
+    public static void setMoneyUserEntered(double moneyUserEntered) {
+        TicketObject.moneyUserEntered = moneyUserEntered;
     }
 }

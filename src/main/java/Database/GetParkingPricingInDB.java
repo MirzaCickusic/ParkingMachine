@@ -39,7 +39,7 @@ public class GetParkingPricingInDB {
 
             if (resultSet.next()) {
 
-                double daylePriceFromDB = resultSet.getDouble(2);
+                double daylePriceFromDB = resultSet.getDouble("dayleRate");
                 return daylePriceFromDB;
             }
         } catch (SQLException e) {

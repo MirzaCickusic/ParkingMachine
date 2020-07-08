@@ -28,7 +28,9 @@ public class GettingTicketsFromDB {
     }
 
     public static void printAllTicketIssued() {
-        String sqlQuery = "select * from tickets";
+        String sqlQuery = "SELECT tickets.id, tickets.timeCreated, tickets.totalPrice, recipe.timeExpired\n" +
+                "FROM recipe\n" +
+                "INNER JOIN tickets ON recipe.id=tickets.id;";
 
         try {
             Connection connection = DbConection.getConnection();
@@ -37,15 +39,19 @@ public class GettingTicketsFromDB {
 
             ResultSet resultSet = statement.executeQuery();
 
+            System.out.println("\n");
+
             while (resultSet.next()) {
                 StringBuffer sb = new StringBuffer();
 
                 int ID = resultSet.getObject("ID", Integer.class);
                 String ticketCreatedTime = resultSet.getObject("timeCreated", String.class);
                 double ticketPrice = resultSet.getObject("totalPrice", Double.class);
+                String dateAndTimeTicketExpires = resultSet.getObject("timeExpired", String.class);
 
                 sb.append("Ticket number " + ID + ". ");
                 sb.append("Issued at time: " + ticketCreatedTime + " for amount of " + ticketPrice + "€");
+                sb.append(" Ticket will expire at: " + dateAndTimeTicketExpires);
 
                 System.out.println(sb.toString());
             }
@@ -56,7 +62,9 @@ public class GettingTicketsFromDB {
         }
     }
 
-    public static void printRecipe() {
+
+    public static void printRecipe(String timeTicketLasts, String dateAndTimeTicketExpires) {
+
         String sqlQuery = "select * from tickets where ID = ?";
 
         try {
@@ -64,7 +72,7 @@ public class GettingTicketsFromDB {
             PreparedStatement statement = connection.prepareCall(sqlQuery, ResultSet.TYPE_SCROLL_INSENSITIVE,
                     ResultSet.CONCUR_READ_ONLY);
 
-            statement.setInt(1, (Integer) TicketObject.getID());
+            statement.setInt(1, TicketObject.getID());
 
             ResultSet resultSet = statement.executeQuery();
 
@@ -73,22 +81,23 @@ public class GettingTicketsFromDB {
                 StringBuffer sb = new StringBuffer();
 
                 String timeTicketIssued = resultSet.getObject("timeCreated", String.class);
-                String timeTicketExpires = resultSet.getObject("timeExpired", String.class);
-                String ticketLength = resultSet.getObject("totalLength", String.class);
+                double change = resultSet.getObject("money_change", Integer.class);
 
-                System.out.println("\n---------------------");
-                sb.append("Ticket created at: " + timeTicketIssued + " Thank you for your purchase!");
-                sb.append("\nTicket expires at: " + timeTicketExpires);
-                sb.append("\nThat gives your " + ticketLength + " to use our parking!");
-                sb.append(" We are watching you O_o ..");
-                System.out.println("\n---------------------");
+
+                sb.append("\nTicket created at: " + timeTicketIssued + " Thank you for your purchase!");
+                sb.append("\nTicket expires at: " + dateAndTimeTicketExpires);
+                sb.append("\nThat gives your " + timeTicketLasts + " to use our parking!");
+                sb.append("\nYour change (kusur) is " + change + "€");
+                sb.append("\n\nWe are watching you O_o ..\n");
 
                 System.out.println(sb.toString());
+
             }
 
 
         } catch (SQLException e) {
             DbConection.sqlException(e);
         }
+
     }
 }

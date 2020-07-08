@@ -1,7 +1,5 @@
 package Database;
 
-import Controler.CoinReceivingMechanism;
-import Controler.SetParkingPricing;
 import Model.TicketObject;
 
 import java.sql.Connection;
@@ -11,7 +9,7 @@ import java.sql.SQLException;
 
 public class GetLastAddedUser {
 
-    public static boolean getUserID() {
+    public static boolean setUserID() {
         String sqlQuery = "SELECT ID FROM tickets ORDER BY id DESC LIMIT 1";
 
         try {

@@ -2,6 +2,7 @@ package Controler;
 
 import Model.TicketObject;
 
+import java.text.ParseException;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
@@ -11,8 +12,8 @@ public class CoinReceivingMechanism {
 
     private static double total;
 
-    public static String getTotal() {
-        return String.valueOf(total);
+    public static double getTotal() {
+        return total;
     }
 
     public static void setTotal(double newTotal) {
@@ -52,8 +53,19 @@ public class CoinReceivingMechanism {
 
         setTotal(totalSumOfAllCoins);
 
-        DateTimeFormatter FOMATTER = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss ");
+        try {
+            setTimeRecipeIsCreated();
+
+        } catch (ParseException e) {
+            e.printStackTrace();
+        }
+
+    }
+
+    private static void setTimeRecipeIsCreated() throws ParseException {
+        DateTimeFormatter FOMATTER = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss");
         LocalDateTime date = LocalDateTime.now();
+
         String dayleTicketEndTimeAndDate = FOMATTER.format(date);
 
         TicketObject.setDateAndTimeTicketCreated(dayleTicketEndTimeAndDate);
