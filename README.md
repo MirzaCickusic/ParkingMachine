@@ -1,5 +1,5 @@
 # ParkingMachine
-Simple parking machine
+Parking machine
 
 To run this project you will need:
 - Java 0.8 or higher (https://java.com/en/download/help/download_options.xml)
